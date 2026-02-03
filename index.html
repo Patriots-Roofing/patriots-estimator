@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patriots Roofing Estimator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Patriots Roofing</h1>
+            <p class="subtitle">Estimate Generator</p>
+        </header>
+
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">📄</div>
+                <p class="upload-text">Drag & drop QuickMeasure PDF here</p>
+                <p class="upload-subtext">or click to browse</p>
+                <input type="file" id="fileInput" accept=".pdf" hidden>
+            </div>
+            <p class="file-name" id="fileName"></p>
+            <button class="estimate-btn" id="estimateBtn" disabled>Generate Estimate</button>
+        </div>
+
+        <div class="loading-section" id="loadingSection" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing QuickMeasure report...</p>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="estimate-header">
+                <h2>Estimate</h2>
+                <p class="address" id="propertyAddress"></p>
+            </div>
+
+            <div class="data-summary" id="dataSummary"></div>
+
+            <div class="pitch-breakdown" id="pitchBreakdown"></div>
+
+            <div class="pricing-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Systems+</th>
+                            <th>Silver</th>
+                            <th>Gold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">HDZ</td>
+                            <td id="hdzSystemsPlus">-</td>
+                            <td id="hdzSilver">-</td>
+                            <td id="hdzGold">-</td>
+                        </tr>
+                        <tr class="uhdz-row">
+                            <td class="row-label">UHDZ</td>
+                            <td id="uhdzSystemsPlus">-</td>
+                            <td id="uhdzSilver">-</td>
+                            <td id="uhdzGold">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="flags-section" id="flagsSection"></div>
+
+            <button class="new-estimate-btn" id="newEstimateBtn">New Estimate</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
