@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #1a3a5c;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.upload-section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 60px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.upload-box:hover {
+    border-color: #1a3a5c;
+    background: #f8fafc;
+}
+
+.upload-box.drag-over {
+    border-color: #1a3a5c;
+    background: #e8f0f8;
+}
+
+.upload-box.has-file {
+    border-color: #22c55e;
+    background: #f0fdf4;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.upload-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.upload-subtext {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.file-name {
+    text-align: center;
+    margin-top: 15px;
+    color: #22c55e;
+    font-weight: 500;
+}
+
+.estimate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    background: #1a3a5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.estimate-btn:hover:not(:disabled) {
+    background: #0f2a44;
+}
+
+.estimate-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.loading-section {
+    background: white;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e5e5e5;
+    border-top-color: #1a3a5c;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.results-section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.estimate-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.estimate-header h2 {
+    color: #1a3a5c;
+    font-size: 1.5rem;
+}
+
+.address {
+    color: #666;
+    margin-top: 5px;
+}
+
+.data-summary {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.data-summary strong {
+    color: #1a3a5c;
+}
+
+.pitch-breakdown {
+    margin-bottom: 20px;
+}
+
+.pitch-breakdown table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.pitch-breakdown th,
+.pitch-breakdown td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.pitch-breakdown th {
+    color: #666;
+    font-weight: 500;
+}
+
+.pricing-table {
+    margin: 25px 0;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.pricing-table thead th {
+    background: #1a3a5c;
+    color: white;
+    font-weight: 600;
+}
+
+.pricing-table thead th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.pricing-table thead th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+.pricing-table tbody td {
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a3a5c;
+}
+
+.pricing-table .row-label {
+    text-align: left;
+    font-weight: 500;
+    color: #666;
+}
+
+.pricing-table .uhdz-row td {
+    background: #f8fafc;
+}
+
+.flags-section {
+    background: #fef3c7;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #92400e;
+}
+
+.flags-section:empty {
+    display: none;
+}
+
+.new-estimate-btn {
+    display: block;
